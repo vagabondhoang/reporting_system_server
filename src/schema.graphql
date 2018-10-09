@@ -1,0 +1,13 @@
+# import Division from "./generated/prisma.graphql"
+
+type Query {
+    info: String!,
+    divisions: [Division!]!
+    division(id: ID!): Division
+}
+
+type Mutation {
+    createDivision(name: String!, description: String): Division!
+    updateDivision(id: ID!, name: String, description: String): Division
+    deleteDivision(id: ID!): Division
+}
